@@ -1,0 +1,5 @@
+Task0:
+Method:
+Since the index of a list start from 0, thats the index from where we get the first value.
+Python has a way to get the last element in a list by putting '-1' as index number.
+Run time: O(1)
