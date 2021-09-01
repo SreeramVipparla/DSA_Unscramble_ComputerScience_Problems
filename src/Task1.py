@@ -14,11 +14,11 @@ with open('calls.csv', 'r') as f:
 
 """
 TASK 1:
-How many different telephone numbers are there in the records? 
+How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
-no_of_diff_num= set()
+no_of_diff_num = set()
 
 for unique_txt in texts:
     no_of_diff_num.add(unique_txt[0])
@@ -28,4 +28,5 @@ for unique_calls in calls:
     no_of_diff_num.add(unique_calls[0])
     no_of_diff_num.add(unique_calls[1])
 
-print('There are {} different telephone numbers in the records.'.format(len(no_of_diff_num)))
+print('There are {} different telephone \
+numbers in the records.'.format(len(no_of_diff_num)))

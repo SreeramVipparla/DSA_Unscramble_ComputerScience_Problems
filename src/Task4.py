@@ -22,20 +22,22 @@ receive texts or receive incoming calls.
 Print a message:
 "These numbers could be telemarketers: "
 <list of numbers>
-The list of numbers should be print out one per line in lexicographic order with no duplicates.
+The list of numbers should be print out one per line in \
+lexicographic order with no duplicates.
 """
-sending_texts = set([text[0] for text in texts]) 
-receiving_texts = set([text[1] for text in texts]) 
+sending_texts = set([text[0] for text in texts])
+receiving_texts = set([text[1] for text in texts])
 
-outgoing = set([call[0] for call in calls]) 
-incoming = set([call[1] for call in calls]) 
+outgoing = set([call[0] for call in calls])
+incoming = set([call[1] for call in calls])
 
 
 telemarketers = []
 
 for call_sender in outgoing:
-    if (call_sender not in incoming and call_sender not in receiving_texts and call_sender not in receiving_texts):
-           telemarketers.append(call_sender)
+    if (call_sender not in incoming and call_sender not in
+       receiving_texts and call_sender not in receiving_texts):
+        telemarketers.append(call_sender)
 
 telemarketers.sort()
 

@@ -16,24 +16,25 @@ TASK 2: Which telephone number spent the longest time on the phone
 during the period? Don't forget that time spent answering a call is
 also time spent on the phone.
 Print a message:
-"<telephone number> spent the longest time, <total time> seconds, on the phone during 
+"<telephone number> spent the longest time,\
+<total time> seconds, on the phone during
 September 2016.".
 """
-no_of_calls = {}  
+no_of_calls = {}
 
-for user, reciever, timestamp, duration in calls:  
+for user, reciever, timestamp, duration in calls:
     # Calling telephone
-    if user in no_of_calls:  
-        no_of_calls[user] += int(duration)  
+    if user in no_of_calls:
+        no_of_calls[user] += int(duration)
     else:
         no_of_calls[user] = int(duration)
 
     # Receiver telephone
-    if reciever in no_of_calls: 
-        no_of_calls[reciever] += int(duration)  
+    if reciever in no_of_calls:
+        no_of_calls[reciever] += int(duration)
     else:
-        no_of_calls[reciever] = int(duration)  
+        no_of_calls[reciever] = int(duration)
 
-Phone,TimeTaken = (max(no_of_calls.items(), key=lambda x: x[1])) 
-print( ' {} spent the longest time, {} seconds, on the phone during'
-      ' September 2016.'.format(Phone,TimeTaken))
+Phone, TimeTaken = (max(no_of_calls.items(), key=lambda x: x[1]))
+print(' {} spent the longest time, {} seconds, on the phone during September \
+2016.'.format(Phone, TimeTaken))

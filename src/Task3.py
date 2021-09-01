@@ -32,7 +32,8 @@ to the following area codes and mobile prefixes:
 Print the answer as part of a message:
 "The numbers called by people in Bangalore have codes:"
  <list of codes>
-The list of codes should be print out one per line in lexicographic order with no duplicates.
+The list of codes should be print out one per line in \
+lexicographic order with no duplicates.
 
 Part B: What percentage of calls from fixed lines in Bangalore are made
 to fixed lines also in Bangalore? In other words, of all the calls made
@@ -44,3 +45,34 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+# I have reffered  the knowledge post for \
+# reference https://knowledge.udacity.com/questions/469376
+call_bnglr_code_count = 0
+bnglr_code = 0
+area_codes_set = set()
+
+
+for logs in calls:
+    if logs[0].startswith('(080)'):
+        bnglr_code += 1
+
+        if logs[1][int(len(logs[1])/2)] == ' ' and \
+           logs[1].startswith(('7', '8', '9')):
+            area_codes_set.add(logs[1][0:4])
+
+        if logs[1].startswith('('):
+            area_codes_set.add(logs[1][logs[1].find("("):logs[1].find(")")])
+
+        if logs[1].startswith('(080)'):
+            call_bnglr_code_count += 1
+
+        if logs[1].startswith('140'):
+            area_codes_set.add('140')
+updated_area_codes__set = sorted(area_codes_set)
+print('The numbers called by people in Bangalore have codes:')
+for code in updated_area_codes__set:
+    print(code)
+
+percentage = call_bnglr_code_count*100/bnglr_code
+print('{} percent of calls from fixed lines in Bangalore are calls to \
+other fixed lines in Bangalore.'.format(round(percentage, 2)))
