@@ -25,9 +25,7 @@ no_of_calls = {}
 for user, reciever, timestamp, duration in calls:
     # Calling telephone
     if user in no_of_calls:
-        no_of_calls[user] += int(duration)
-    else:
-        no_of_calls[user] = int(duration)
+        no_of_calls[user] = no_of_calls.get(user, 0)+int(duration)
 
     # Receiver telephone
     if reciever in no_of_calls:
