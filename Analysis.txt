@@ -1,22 +1,55 @@
 Analysis
 
-Task0:
-The total time complexity of the code is O(1)
+
+#Task0:
+The total time complexity of the code is O(1).
+
+Explanation:
+
+In this code I found  the required output by indexing (calls.csv and texts.csv).
+In this code I have used specific indices to index out the correct information.
+Here since the space required by the algorithm to process data is constant,hence the runtime is O(1)
 
 
-Task1:
-The total time complexity of the code is O(n)
+#Task1:
+The total time complexity of the code is O(n).
 
-Task2:
-The total time complexity of the code is O(n)
+Explanation:
 
-Task3: 
-Part A:
+In this code I found the required output by indexing (calls.csv anfd texts.csv).
+I have used specific indices to index out the correct information to obtain the required output.
+As the running time increases at most linearly with the size of the input in the code, hence the  total time complexity of the code is O(n).
 
-The total time complexity of the code is  O(nlog(n))
 
-PartB:
-The total time complexity of the code is  O(n)
+#Task2:
+The total time complexity of the code is O(n).
 
-Task4:
-The total time complexity of the code is O(nlogn) since we have to sort the set and worst case scenario is that there are all unique values in the original list.
+Explanation:
+
+The time complexity of the code can by be analysed by  breaking the analysis into 2 parts
+1)O(n): for the for loop(The time complexity is O(n) because  the running time increases at most linearly with the size of the input in the code)
+2)O(n): for max items in a list(The time complexity is O(n) because  the running time increases at most linearly with the size of the input in the code)
+Therefore the total time compexity of the code is O(n).
+
+
+#Task3: 
+The total time complexity of the code is  O(nlog(n)).
+
+Explanation:
+
+In the code, to obtain the required output regarding the  unique area codes, I stored the values of area codes into a set.
+In this code the worst case scenario is when the original list has all unique values.
+Here since  the algorithm's maximum running time is proportional to the logarithm of the input size
+Therefore the total time compexity of the code is O(nlog(n)).
+
+
+#Task4:
+The total time complexity of the code is  O(nlog(n)).
+
+Explanation:
+
+In the code,to obtain the required output regarding the possible telemarketers, I stored the values possible into a list.
+Here the worst case scenario is when the original list has all unique values.
+Here since  the algorithm's maximum running time is proportional to the logarithm of the input size
+Therefore the total time compexity of the code is O(nlog(n)).
+

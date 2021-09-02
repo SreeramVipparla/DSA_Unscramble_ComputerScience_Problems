@@ -32,7 +32,8 @@ to the following area codes and mobile prefixes:
 Print the answer as part of a message:
 "The numbers called by people in Bangalore have codes:"
  <list of codes>
-The list of codes should be print out one per line in lexicographic order with no duplicates.
+The list of codes should be print out one per \
+line in lexicographic order with no duplicates.
 
 Part B: What percentage of calls from fixed lines in Bangalore are made
 to fixed lines also in Bangalore? In other words, of all the calls made
@@ -55,7 +56,8 @@ for logs in calls:
     if logs[0].startswith('(080)'):
         bnglr_code += 1
 
-        if logs[1][int(len(logs[1])/2)] == ' ' and logs[1].startswith(('7', '8', '9')):
+        if logs[1][int(len(logs[1])/2)] == ' ' and \
+           logs[1].startswith(('7', '8', '9')):
             area_codes_set.add(logs[1][0:4])
 
         if logs[1].startswith('('):
