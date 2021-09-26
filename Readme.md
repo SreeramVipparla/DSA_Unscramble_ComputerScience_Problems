@@ -1,5 +1,6 @@
-## Introduction
+# DSA Unscramble ComputerScience Problems Project
 
+## Introduction
 
 This DSA project involves retriving data based on phone numbers given in the csv file using python.
 
